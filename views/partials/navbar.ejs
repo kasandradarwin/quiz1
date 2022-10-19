@@ -1,0 +1,30 @@
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="../../public/images/frisbylogo.png">
+              <img src="https://img.freepik.com/premium-vector/chicken-mascot-logo-design-vector-template_441059-159.jpg?w=740" width="100" height="100" alt="chicken_logo">
+            </a>
+          </nav>
+       
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+
+                <% if (username) { %>
+                
+                        <a class="btn btn-secondary navbar-text float-right" href="../posts/new" id="cluck">Cluck</a>
+                        <span><%- username %></span>
+                        <form action="/user/signout" method="POST">
+                            <button type="submit" class='btn btn-secondary'>Sign Out</button>
+                        </form>
+
+                <% } else { %>
+                    <a class="btn btn-secondary " href="../user/signin" role="button">Cluck!</a>
+                    <a class="btn btn-secondary" href="../user/signin" role="button">Sign in</a>
+                    
+                   
+                <% } %>
+                 
+        </div>
+    </nav>
+<br>
+<hr/>

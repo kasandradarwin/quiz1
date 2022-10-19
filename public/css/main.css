@@ -1,0 +1,31 @@
+
+img {
+    max-width: 25vw;
+}
+
+
+* {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+body {
+    color:gray;
+}
+
+.lil-chicken {
+    height: 4em;
+    width: 4em;
+    float: left;
+    margin: 2em;
+}
+
+.btn-block {
+    width: 100%
+}
+
+.show-page-btn{
+    margin: auto 0;
+    padding:0%;
+    width: 49%;
+}
