@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs")%>
+
+<%if (!username) { %>
+    <p>You've got to be signed in to cluck!</p>
+    <% } %>
+
+<div class="card">
+    <div class="card-body">
+        <form action="../posts/new" method="post">
+            <label for="content">Content</label>
+            <input class='form-control mr-2' type="text"  id="content" name="content" placeholder="Whatchoo cluckin''bout?"/>
+            <br>
+            <div class="mb-3">
+                <label for="image_url" class="form-label">Image URL</label>
+                <input name="image_url" input type="url" class="form-control" id="image_url" placeholder="https://i.imgur.com/qM6KaEy.gifv">
+              </div>
+            
+            <input type="Submit" Value="Cluck!"  class='btn btn-outline-secondary float-end'></input>
+        </form>
+    </div>
+</div>
+<form method="POST" action="/../posts/new">
+   
+    
+    
+
+    
+    </form>
+
+
+
+<%- include("../partials/footer.ejs")%>

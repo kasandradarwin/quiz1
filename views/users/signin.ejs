@@ -1,0 +1,19 @@
+<%- include("../partials/header.ejs")%>
+
+<%if (!username) { %>
+<p>You've got to be signed in to cluck!</p>
+<% } %>
+<div class="card">
+    <div class="card-body">
+        <form action="/user/signin" method="post">
+            <label for="username">Username</label>
+            <input class='form-control mr-2' type="text" name="username" placeholder="e.g Madam Welminster"/>
+            <br>
+            <input type="Submit" Value="Sign In" class='btn btn-outline-secondary'></input>
+        </form>
+    </div>
+</div>
+   
+
+
+    <%- include("../partials/footer.ejs")%>

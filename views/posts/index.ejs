@@ -1,0 +1,66 @@
+<%- include("../partials/header.ejs")%>
+
+
+<div>
+  <% for (let post of posts)  { %>
+  
+
+    <div class="card" style="width: 80vw;">
+      
+      <div class="card-body">
+        <img src="https://img.freepik.com/premium-vector/chicken-mascot-logo-design-vector-template_441059-159.jpg?w=740" width="50px">
+          
+          <h5 class="card-title"><%=post.username%> • <%=post.created_at%>  </h5>
+   
+        <p class="card-text"><%= post.content %></p>
+        <% if (post.image_url) { %>
+          <img src= 
+            "<%= post.image_url%>" width="10px" class="image_url card-img-top"> </img>
+          
+              <% } %>
+        <hr/>
+    
+    </div>
+    <% } %>
+  </div>
+</div>
+</div>
+
+
+
+
+<%- include("../partials/footer.ejs")%>
+
+
+<div>
+ <% for (let post of posts)  { %>
+    <!-- <p><%-post.image_url %></p>
+    <p><%-post.username %></p>
+    <p><%-post.content %></p>
+    <p><%-post.id %></p> -->
+
+   
+   <div class="card" style="width: 80vw;">
+        <div class="card-body">
+          <h5 class="card-title"><%=post.username%> • 1 hour ago   </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%=post.content%></h6>
+          <p class="card-text"> <% if (post.image_url) { %>
+          <img src= 
+              "<%= post.image_url%> " width="200" class="image_url"> </img>
+                <% } %>
+      .</p>
+          <!-- <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a> -->
+        </div>
+      </div>
+   
+
+       <% console.log("post: " , post)
+console.log("image: " , post.image_url)
+console.log("username: " ,  post.username)
+console.log("content: " , post.content)
+console.log("id: " , post.id)%>
+
+
+<% } %>
+
